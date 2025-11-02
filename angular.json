@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "RunningActivityRepairingTool": {
+    "AngularCourseFH": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -53,10 +53,10 @@
           "builder": "@angular/build:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "RunningActivityRepairingTool:build:production"
+              "buildTarget": "AngularCourseFH:build:production"
             },
             "development": {
-              "buildTarget": "RunningActivityRepairingTool:build:development"
+              "buildTarget": "AngularCourseFH:build:development"
             }
           },
           "defaultConfiguration": "development"

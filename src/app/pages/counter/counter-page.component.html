@@ -1,0 +1,16 @@
+<h1>
+  Hello, this is my template
+</h1>
+
+<button (click)="increment()">
+  Click here to increase counter: {{ this.counter }}
+</button>
+
+<button (click)="decrement()">
+  click here to decrease counter: {{ this.counter }}
+</button>
+
+<form (submit)="$event.preventDefault(); increaseBy(num.valueAsNumber)">
+  <input #num type="number"/>
+  <button type="submit">Increase {{ this.counterSignal() }}</button>
+</form>
