@@ -1,0 +1,25 @@
+<style>
+  nav {
+    display: flex;
+    justify-content: space-around;
+    background-color: #212121;
+    padding: 1rem;
+    color: blanchedalmond;
+  }
+
+  nav a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+  }
+
+  nav a.active {
+    color: rgb(162, 12, 12);
+  }
+</style>
+
+
+<nav>
+  <a routerLink="/counter" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Counter</a>
+  <a routerLink="/hero" [routerLinkActive]="'active'">Hero</a>
+</nav>
