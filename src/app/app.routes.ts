@@ -16,5 +16,9 @@ export const routes: Routes = [
   {
     path: 'unknown',
     component: PlaceholderComponent,
+  },
+  {
+    path: 'dragonball',
+    loadComponent: () => import('./pages/dragonball-page/dragonball-page.component').then( m => m.DragonBallPageComponent )
   }
 ];
