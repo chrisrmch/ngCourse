@@ -20,5 +20,9 @@ export const routes: Routes = [
   {
     path: 'dragonball',
     loadComponent: () => import('./pages/dragonball-page/dragonball-page.component').then( m => m.DragonBallPageComponent )
+  },
+    {
+    path: 'dragonball-super',
+    loadComponent: () => import('./pages/dragonball-super/dragonball-super.component').then( m => m.DragonBallSuperComponent )
   }
 ];

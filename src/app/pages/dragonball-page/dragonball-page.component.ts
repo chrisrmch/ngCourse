@@ -1,12 +1,6 @@
-import { NgClass } from '@angular/common';
 import { Component, signal, computed } from '@angular/core';
+import { Character } from '../../interfaces/character.interface';
 
-
-interface Character {
-  id: number;
-  name: string;
-  power: number;
-}
 
 @Component({
   selector: 'app-dragonball-page',
