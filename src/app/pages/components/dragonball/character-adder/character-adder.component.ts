@@ -1,4 +1,4 @@
-import { Component, signal } from '@angular/core';
+import { Component, signal, output } from '@angular/core';
 import { Character } from '../../../../interfaces/character.interface';
 
 @Component({
@@ -10,7 +10,10 @@ export class DragonballCharacterAdd {
 
   name = signal("Gohan")
   power = signal(100)
+
   characters = signal<Character[]>([]);
+  newCharacter = output<Character>()
+
 
     addCharacter() {
     if (!this.name() || !this.power() || this.power() <= 0) {
@@ -20,7 +23,7 @@ export class DragonballCharacterAdd {
     console.log({ name: this.name(), power: this.power() });
 
     const newCharacter: Character = {
-      id: Math.random() + 1,
+      id: Math.floor(Math.random()),
       name: this.name(),
       power: this.power(),
     };
@@ -28,9 +31,11 @@ export class DragonballCharacterAdd {
 
     console.log(newCharacter);
 
-    // this.characters.update(
-    //   (list) => [...list, newCharacter]);
-    // this.resetFields();
+    this.newCharacter.emit(newCharacter);
   }
 
+  resetFields() {
+    this.name.set('');
+    this.power.set(0);
+  }
 }
